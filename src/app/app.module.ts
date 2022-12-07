@@ -12,7 +12,8 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { FormsModule } from '@angular/forms';
- 
+import { HttpClientModule } from '@angular/common/http';
+
   const myRoute:Routes=[
     {
       path:"",
@@ -54,7 +55,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

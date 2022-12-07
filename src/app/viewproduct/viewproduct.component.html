@@ -8,18 +8,18 @@
                     <table class="table">
                         <thead>
                           <tr>
-                            <th scope="col">dsgs</th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
-                            <th scope="col"></th>
+                            <th scope="col">name</th>
+                            <th scope="col">image</th>
+                            <th scope="col">category</th>
+                            <th scope="col">description</th>
+                            <th scope="col">price</th>
                           </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                          <tr *ngFor="let i of data">
+                            <td>{{i.name}}</td>
+                            <td>{{i.image}}</td>
+                            <td>{{i.category}}</td>
+                            <td>{{i.description}}</td>
+                            <td>{{i.price}}</td>
                           </tr>
                         </thead>
                       </table>

@@ -8,26 +8,26 @@ color: darkmagenta;
             <div class="row g-3">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form label" style="color: indigo;">Product Name</label>
-                    <input type="text" class="form-control">
+                    <input name="name" [(ngModel)]="name"  type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form label" style="color: indigo;">Image</label>
-                    <input  type="file" name="" id="" class="form-control">
+                    <input name="image" [(ngModel)]="image" type="file" name="" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form label" style="color: indigo;">Category</label>
-                    <input  type="text" class="form-control">
+                    <input name="category" [(ngModel)]="category"  type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form label" style="color: indigo;">Description</label>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="description" [(ngModel)]="description" name="" id="" cols="30" rows="10" class="form-control"></textarea>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form label" style="color: indigo;">Price</label>
-                    <input  type="text" class="form-control">
+                    <input name="price" [(ngModel)]="price"  type="text" class="form-control">
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto">
-                    <button type="button" class="btn btn-outline-info">Submit</button>
+                    <button (click)="readValues()" type="button" class="btn btn-outline-info">Submit</button>
                   </div>
             </div>
         </div>
