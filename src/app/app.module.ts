@@ -10,6 +10,8 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 import { SearchProductComponent } from './search-product/search-product.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ViewproductComponent } from './viewproduct/viewproduct.component';
+import { FormsModule } from '@angular/forms';
  
   const myRoute:Routes=[
     {
@@ -31,6 +33,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     {
       path:"search",
       component:SearchProductComponent
+    },
+    {
+      path:"view",
+      component:ViewproductComponent
     }
   ]
 @NgModule({
@@ -41,12 +47,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     UserRegComponent,
     AddproductComponent,
     SearchProductComponent,
-    NavbarComponent
+    NavbarComponent,
+    ViewproductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule.forRoot(myRoute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
