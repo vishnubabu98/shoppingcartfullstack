@@ -1,0 +1,37 @@
+<app-user-navbar></app-user-navbar>
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label style="font-size:larger" for="" class="form-label"style="color: #dc3545;">product name</label>
+                    <input name="name" [(ngModel)]="name"  type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" type="button" class="btn btn-outline-success">Search</button>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    <div class="row"*ngFor="let j of searchData">
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6"*ngFor="let i of searchData">
+            <div class="card" style="width: 18rem;">
+                <img src="{{i.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.name}}</h5>
+                  <p class="card-text">{{i.description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{i.price}}</li>
+                  <li class="list-group-item">{{i.category}}</li>
+                  
+                </ul>
+              </div>
+        </div>
+        
+    </div>
+</div>
+
+

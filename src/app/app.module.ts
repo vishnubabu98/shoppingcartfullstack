@@ -13,6 +13,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ViewproductComponent } from './viewproduct/viewproduct.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewProductUserComponent } from './view-product-user/view-product-user.component';
+import { UserSearchComponent } from './user-search/user-search.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
 
   const myRoute:Routes=[
     {
@@ -38,6 +41,14 @@ import { HttpClientModule } from '@angular/common/http';
     {
       path:"view",
       component:ViewproductComponent
+    },
+    {
+      path:"viewuser",
+      component:ViewProductUserComponent
+    },
+    {
+      path:"searchuser",
+      component:UserSearchComponent
     }
   ]
 @NgModule({
@@ -49,7 +60,10 @@ import { HttpClientModule } from '@angular/common/http';
     AddproductComponent,
     SearchProductComponent,
     NavbarComponent,
-    ViewproductComponent
+    ViewproductComponent,
+    ViewProductUserComponent,
+    UserSearchComponent,
+    UserNavbarComponent
   ],
   imports: [
     BrowserModule,
