@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-user-reg',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class UserRegComponent {
 
-  constructor(private route: Router) { }
+  constructor(private route: Router,private api:ApiService) { }
   name=""
   phoneno=""
   address=""
@@ -40,7 +41,14 @@ export class UserRegComponent {
       this.password=""
       this.confirmpassword=""
     }
+    this.api.addUser(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+      }
+    )
   }
+
+
 
     
 
